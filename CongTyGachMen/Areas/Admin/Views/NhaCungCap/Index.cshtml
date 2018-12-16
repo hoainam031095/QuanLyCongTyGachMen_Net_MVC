@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CongTyGachMen.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Danh sách nhà cung cấp</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Chinhsua", new { @MaNCC = item.MaNCC}) |
+            @Html.ActionLink("Chi tiết", "Hienthi", new { @MaNCC = item.MaNCC }) |
+            @Html.ActionLink("Xóa", "Xoa", new { @MaNCC = item.MaNCC })
+        </td>
+    </tr>
+}
+
+</table>

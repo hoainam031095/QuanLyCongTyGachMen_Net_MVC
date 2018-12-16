@@ -1,0 +1,57 @@
+﻿@model CongTyGachMen.Models.VatLieu
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Xác nhận xóa.</h2>
+
+<h3>Bạn có muốn xóa Vật liệu này?</h3>
+<div>
+    <h4>Vật liệu: </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVT)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

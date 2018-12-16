@@ -1,0 +1,369 @@
+/*==========reset=============*/
+body,button{
+	font-family: arial;
+	font-size:15px;
+	color: #424242;
+}
+body{
+	margin: 0px;
+	padding: 5px 0px;
+}
+form,h1,h2,h3,h4,p,button,ul,div{
+	margin:0;
+	padding:0px 0px;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	/*=========maincss============*/border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+a{
+	text-decoration:none;
+}
+
+*{
+	box-sizing: border-box;
+	
+}
+header,a,ul,li,div{
+	/*transition: .7s all;*/
+}
+/*=========maincss============*/
+#header{
+	height: 95px;
+	width: 100%;
+
+}
+#header .logo{
+	width:20%;
+	float: left;
+	padding-left: 80px;
+}
+#header .logo img{
+	width: 190px;
+}
+#header .menu{
+	width: 75%;
+    float: left;
+    margin-left: 50px;
+	padding: 40px 0px;
+}
+#header .menu ul{
+
+}
+#header .menu li{
+	padding: 0px 15px;
+	display: inline-block;
+
+}
+#header .menu a{
+	color: #424242;
+}
+
+#header .menu li:hover{
+	background-color: #70b4b7;
+	text-decoration: none;
+}
+#header .menu li:hover a{
+	text-decoration: none;
+	color: white;
+}
+#header .menu .menu-li{
+	display: none;
+	color: black;
+}
+#header .menu li:hover .menu-li{
+	position: absolute;
+	display: block;
+	width: 150px;
+	z-index: 5;
+	background-color: white;
+	
+}
+    #header .menu-li li:hover {
+        background-color:green;
+    }
+#header .menu-li li:hover a{
+	color: #fff;
+}
+/*#header .menu li:hover .menu-li{
+	display: block;
+}
+*/
+
+/*========content========*/
+#slider .blidersl{
+	
+}
+/*==============*/
+#dichvu{
+	padding: 60px 0px;
+	text-align: center;
+}
+#dichvu h3{
+	padding-bottom: 10px;
+	font-size: 25px;
+    width: 17%;
+    margin: 0 auto;
+    border-bottom:2px solid #424242;
+    color: #424242;
+}
+#dichvu .danhsach{
+ 	padding-top: 40px;
+}
+#dichvu .bliderds .dv{
+	padding: 0;
+}
+#dichvu .bliderds .dv h5{
+	position: relative;
+	top:-60px;
+	color: #fff;
+	font-size: 20px;
+}
+#dichvu .bliderds img{
+	margin: 0 auto;
+}
+#dichvu .bliderds img:hover{
+	transform: scale(1.1,1);
+    -moz-transform: scale(1.1,1);
+    -webkit-transform: scale(1.1,1);
+    -o-transform: scale(1.1,1);
+    -ms-transform: scale(1.1,1);
+    transition: .5s all;
+}
+/*==============*/
+#thongtin {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #70b4b7;
+	text-align: center;
+}
+#thongtin h3{
+	padding-bottom: 10px;
+	font-size: 25px;
+    width: 16%;
+    margin: 0 auto;
+    border-bottom:2px solid #fff;
+    color: #fff;
+}
+#thongtin .tintuc{
+	padding-top: 40px;
+}
+#thongtin .tintuc h4{
+	padding: 20px 0px;
+}
+#thongtin .tintuc .no-hot{
+	width: 100%;
+}
+#thongtin .tintuc .test{
+	background-color: #fff;
+	border:1px solid #424242;
+	height: 430px;
+}
+#thongtin .tintuc p{
+	padding-left: 5px;
+}
+#thongtin .tintuc a{
+	position: absolute;
+	bottom: 30px;
+}
+
+/*==========================*/
+#dangkygiamgia{
+	width: 100%;
+	padding: 40px 0px;
+}
+#dangkygiamgia .background{
+	width: 90%;
+	background-color: #70b4b7;
+	margin: 0 auto;
+	padding-top: 30px;
+	padding-bottom: 55px;
+}
+#dangkygiamgia .background .text{
+	width: 58%;
+	float: left;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+#dangkygiamgia .background .text img{
+	width: 149px;
+    position: relative;
+    float: left;
+    top: -54px;
+    left: -35px;
+}
+#dangkygiamgia .background .email{
+	width: 40%;
+	float: left;
+}
+#dangkygiamgia .background .email input{
+	width: 80%;
+	height: 40px;
+	padding-left: 15px;
+}
+#dangkygiamgia .background .email button{
+	height: 40px;
+	width: 80px;
+}
+#dangkygiamgia .background .email button:hover{
+	background-color: #cccccc;
+}
+
+/*============================*/
+#khachhang{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px;
+}
+#khachhang h3{
+	padding-bottom: 10px;
+	font-size: 25px;
+    width: 10%;
+    margin: 0 auto;
+    border-bottom:2px solid #424242;
+    color: #424242;
+}
+#khachhang .slide{
+	width:50%;
+	margin: 0 auto;
+}
+#khachhang .slide .bliderkh{
+
+}
+#khachhang .bliderkh .ykien{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+#khachhang .bliderkh .ykien img{
+	margin: 0 auto;
+	padding-top: 63px;
+}
+
+#khachhang .bliderkh .my-khoi img{
+	margin: 0 auto;
+	padding-top:21px;
+}
+#khachhang .bliderkh .uhphuc img{
+	margin: 0 auto;
+	padding-top:42px;
+}
+#khachhang .bliderkh .ykien h6{
+	font-size: 18px;
+	padding-top: 15px;
+}
+#khachhang .bliderkh .ykien a{
+	font-size: 13px;
+}
+/*==========================*/
+#lienhe{
+	padding-top: 40px;
+	background-color: #70b4b7;
+	color: #fff;
+	padding-bottom: 100px;
+}
+#lienhe h4{
+	font-size: 20px;
+	padding-bottom: 40px;
+	font-weight: bold;
+
+}
+#lienhe .col{
+	padding-bottom: 20px;
+}
+#lienhe .chinhanh i{
+	color: #424242;
+}
+#lienhe .chinhanh h6{
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0px;
+}
+#lienhe .chinhanh p{
+	padding-top: 10px;
+	padding-bottom: 40px;	
+}
+#lienhe .datlich-tuvan form{
+	color: #424242;
+}
+#lienhe textarea{
+	resize: none;
+	width: 100%;
+	height: 100px;
+	padding-left: 10px;
+}
+#lienhe input{
+	height: 35px;
+	width: 100%;
+	padding-left: 8px;
+	margin-bottom: 5px;
+}
+#lienhe button{
+	width: 100%;
+	height: 35px;
+	margin-top: 10px;
+}
+#lienhe button:hover{
+	background-color: #cccccc;
+}
+#lienhe .theodoi iframe{
+	height: 310px;
+}
+/*===========footer===========*/
+#footer{
+	border-top: 1px solid #fff;
+	background-color: #70b4b7;
+	color: #fff;
+	height: 100px;
+
+}
+#footer .left{
+	width: 49%;
+	float: left;
+	text-align: left;
+	padding-top: 40px;
+	padding-left: 100px;
+}
+#footer .right{
+	width: 49%;
+	float: left;
+	text-align: right;
+	padding-top: 40px;
+	padding-right: 100px;
+}
+#footer .right li{
+	display: inline-block;
+	list-style: none;
+	padding: 5px 10px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+#footer .right .fb{
+	padding: 5px 13px;
+}
+#footer .right .gg{
+	padding: 5px 7px;
+}

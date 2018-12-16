@@ -1,0 +1,58 @@
+﻿@model CongTyGachMen.Models.Kho
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Thông tin chi tiết kho</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKho)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKho)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Chinhsua", new {@MaKho = Model.MaKho}) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

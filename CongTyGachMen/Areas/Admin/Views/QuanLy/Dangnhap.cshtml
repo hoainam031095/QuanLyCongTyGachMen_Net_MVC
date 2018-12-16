@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quản lý cty</title>
+    <link href="~/Areas/Admin/Content/css1/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/css1/dangnhap.css" rel="stylesheet" />
+
+    <script src="~/Areas/Admin/Content/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <div class="container">
+            
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                        <div class=" dangnhap">
+                            <div class="nhan">
+                                <h3 class="panel-title">Đăng nhập</h3>
+                            </div>
+                            <div class="form-submid">
+                                <span style="color:red">@ViewBag.Thongbao</span>
+                                @using (Html.BeginForm("Dangnhap", "Quanly", FormMethod.Post))
+                                {  
+                                        <div class="email text-box">
+                                            <input class="form-control" type="text" name="txttaikhoan" />
+                                        </div>
+                                        <div class="matkhau text-box">
+                                            <input class="form-control" type="password" name="txtmatkhau" />
+                                        </div>
+                                        <button type="submit" class="btn">Login</button>
+                                }
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

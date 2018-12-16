@@ -1,0 +1,56 @@
+﻿@model CongTyGachMen.Models.ChiTietHoaDonNhap
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Xóa hóa đơn</h2>
+<span style="color:red;">@ViewBag.Thanhcong</span>
+<h3>Bạn có muốn xóa hóa đơn?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dongia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dongia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại danh sách", "Index")
+        </div>
+    }
+</div>

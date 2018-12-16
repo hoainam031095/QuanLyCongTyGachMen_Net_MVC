@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CongTyGachMen.Models.VatLieu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Danh sách vật liệu</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaVL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenVL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DVT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaVL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenVL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongTon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DVT)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Chinhsua", new { MaVL = item.MaVL}) |
+            @Html.ActionLink("Chi tiết", "Hienthi", new { MaVL = item.MaVL }) |
+            @Html.ActionLink("Xóa", "Xoa", new { MaVL = item.MaVL })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .Xacnhan{
+        margin-top: 200px;
+        margin-left: 400px;
+    }
+</style>
+<div class="Xacnhan">
+    <h2>Bạn không có quyền truy cập trang này</h2>
+    <a href="@Url.Action("Index", "TrangChu")"><span>Quay về trang chủ</span></a> |
+    <a href="@Url.Action("DangXuat", "QuanLy")"><span>Đăng nhập bằng tài khoản khác</span></a>
+</div>
+

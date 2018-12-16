@@ -1,0 +1,59 @@
+﻿@model CongTyGachMen.Models.SanPham
+
+@{
+    ViewBag.Title = "Hienthi";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Thông tin sản phẩm</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Chinhsua", new { @MaSp = Model.MaSp}) |
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</p>

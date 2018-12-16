@@ -1,0 +1,58 @@
+﻿#baocao .dieukien {
+    border: 1px solid #0094ff;
+    padding: 0px 10px;
+    padding-right: 10px;
+    background: #c2c0ce;
+}
+
+#baocao .dieukien-left {
+    padding: 5px 0px;
+    float: left;
+}
+ #baocao .dieukien-left .input {
+        width: 94%;
+        height: 30px;
+        margin-top: 0px;
+        margin-bottom: 6px;
+        padding-left:10px;
+    }
+
+#baocao .dieukien-left .dieukien-left-left {
+        position: relative;
+        float: left;
+        width: 50%;
+    }
+
+#baocao .dieukien-left .dieukien-left-right {
+        position: relative;
+        float: left;
+        width: 50%;
+    }
+#baocao .dieukien-left-right .input {
+    margin-top: 2px;
+    margin-bottom: 6px;
+    padding-left: 10px;
+}
+#baocao .dieukien-right {
+    padding: 5px 0px;
+    float: left;
+}
+    #baocao .dieukien-right .right-input {
+        width: 84%;
+        height: 30px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        padding-left: 10px;
+    }
+#baocao .xuly {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+#baocao .xuly .button{
+    width: 70px;
+    height:30px;
+}
+#baocao .xuly .button:hover{
+    background:#867979;
+    color:#e1d9d9;
+}

@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "IndexHDXuat";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<div id="baocao">
+    <div class="body">
+        <h2>Báo cáo chi tiết</h2>
+        <div class="container dieukien">
+            @using (Html.BeginForm("BaocaoXuat", "BaoCaoChiTiet"))
+            {
+                <div class="dieukien-left col-lg-7 ">
+                    <div class="dieukien-left-left">
+                        <div class="rows1">
+                            <div><input type="radio" checked="checked" name="radio" value="Theongay" />Từ Ngày</div>
+                            <div class="left-left-input">
+                                <input type="date" class="input" name="Tungay" />
+                            </div>
+                        </div>
+                        <div class="rows2">
+                            <div><input type="radio" name="radio" value="Theothang" />Riêng Cho Tháng</div>
+                            <div style="width:100%" class="left-left-input">
+                                <select class="input" name="Riengchothang">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows3">
+                            <div><input type="radio" name="radio" value="Theoquy" />Riêng Cho Quý</div>
+                            <div style="width:100%" class="left-left-input">
+                                <select class="input" name="Riengchoquy">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows4">
+                            <div><input type="radio" name="radio" value="Theonam" />Trọn Năm</div>
+                            <div style="width:100%" class="left-left-input">
+                                <select class="input" name="Tronnam">
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dieukien-left-right">
+                        <div class="rows1">
+                            <div>Đến Ngày</div>
+                            <div class="left-right-input">
+                                <input type="date" class="input" name="Denngay" />
+                            </div>
+                        </div>
+                        <div class="rows2">
+                            <div>Năm</div>
+                            <div class="left-right-input">
+                                <select class="input" name="Riengchothangnam">
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows3">
+                            <div>Năm</div>
+                            <div style="width:100%" class="left-right-input">
+                                <select class="input" name="Riengchoquynam">
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
+                                    <option>2018</option>
+                                    <option>2019</option>
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dieukien-right col-lg-4">
+                    <div class="rows1">
+                        <div>Khách Hàng</div>
+                        <div class="">
+                            @Html.DropDownList("MaKH", null, new { @class = "right-input" })
+                        </div>
+                    </div>
+                    <div class="rows2">
+                        <div>Kho</div>
+                        <div class="">
+                            @Html.DropDownList("MaKho", null, new { @class = "right-input" })
+                        </div>
+                    </div>
+                    <div class="rows3">
+                        <div>Hình thức</div>
+                        <div class="">
+                            <input type="text" class="right-input" name="Hoadon" value="Xuat" readonly="readonly" />
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+
+                <div class="xuly">
+                    <input class="button" type="submit" value="Xử Lý" />
+                </div>
+            }
+        </div>
+        <div class="container ketqua">
+
+        </div>
+    </div>
+</div>
+

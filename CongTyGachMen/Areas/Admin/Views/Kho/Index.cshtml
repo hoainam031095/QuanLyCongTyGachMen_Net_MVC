@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CongTyGachMen.Models.Kho>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Layout/LayoutQuanly.cshtml";
+}
+
+<h2>Danh sách kho</h2>
+<p>
+    @Html.ActionLink("Thêm mới", "ThemMoi")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKho)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKho)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelitem => item.MaNV)
+        </td>
+        <td>
+            <a href="@Url.Action("Index", "HoaDonNhap",new { MaKho = item.MaKho })"><span>Nhập</span></a> |
+            <a href="@Url.Action("Index", "HoaDonXuat",new { MaKho = item.MaKho })"><span>Xuất</span></a> |
+            @Html.ActionLink("Sửa", "Chinhsua", new { @MaKho = item.MaKho }) |
+            @Html.ActionLink("Chi tiết", "Hienthi", new { @MaKho = item.MaKho }) |
+                @Html.ActionLink("Xóa", "Xoa", new { @MaKho = item.MaKho })
+</td>
+    </tr>
+}
+
+</table>
